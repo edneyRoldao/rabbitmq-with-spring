@@ -1,0 +1,20 @@
+version: '3'
+
+networks:
+  redelab:
+    ipam:
+      driver: default
+
+services:
+  rabbitmqsrv:
+    image: rabbitmq:3-management
+    container_name: "rabbit13"
+    environment:
+      RABBITMQ_DEFAULT_USER: "admin"
+      RABBITMQ_DEFAULT_PASS: "admin"
+    ports:
+      - "8088:15672"
+      - "5672:5672"
+      - "25676:25676"
+    networks:
+      redelab:
