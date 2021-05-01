@@ -11,7 +11,7 @@ docker-compose up -d
 ### RabbitMQ dashboard
 > http://localhost:8088/
 
-### to trigger process you to make a post like bellow
+### to trigger process you need to make a post like bellow
 ```
 curl --location --request POST 'http://localhost:8082/digital-bank/api/create' --header 'Content-Type: application/json' --data-raw '{"name": "edney roldao","accountID": "ancasfdasd"}'
 ```
