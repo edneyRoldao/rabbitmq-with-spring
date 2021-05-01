@@ -1,7 +1,7 @@
 # rabbitmq-with-spring
 
 - This is a simple project to illustrate how to work with rabbitMQ, Java and Spring.
-- There many ways to work with Exchanges in Rabbit, the approach chosen was Topic exchange.
+- There are many ways to work with Exchanges in Rabbit, the approach chosen was Topic exchange.
 
 
 ### first thing first you need to install rabbitMQ or run command below if you have docker-compose on your machine. (the file is provided in this repository)
