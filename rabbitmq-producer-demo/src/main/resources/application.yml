@@ -1,7 +1,7 @@
 spring:
   rabbitmq:
-    username: admin
-    password: admin
+    username: eai
+    password: 5ZxZ9hMkySW9
 
 server:
   port: 8082

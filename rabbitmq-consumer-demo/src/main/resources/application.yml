@@ -1,7 +1,15 @@
 spring:
   rabbitmq:
-    username: admin
-    password: admin
+    username: eai
+    password: 5ZxZ9hMkySW9
+
+app:
+  queue:
+    bank: bank_queue
+    order: status_order_queue
+    payment: status_payment_queue
+  test:
+    queue: unkownQueue
 
 server:
   port: 8085
