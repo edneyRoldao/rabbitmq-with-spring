@@ -25,13 +25,17 @@ public class WebhookController {
     @PostMapping
     public ResponseEntity<?> statusOrderWebhook(@RequestHeader("abasteceai-signature") String signature,
                                                 @RequestBody OrderStatusNotificationDTO request) {
-        log.warn("Webhook called - request:{}", request);
-
         String ownSignature = generateHashCodeWithMacSha256(SECRET_KEY, request);
+        boolean result = signature.equals(ownSignature);
 
-        log.error("signature:{} - ownSignature:{}", signature, ownSignature);
+        System.out.println("########################");
+        System.out.println("########################");
+        System.out.println(result);
+        System.out.println(request);
+        System.out.println("########################");
+        System.out.println("########################");
 
-        return signature.equals(ownSignature) ? ResponseEntity.ok().build() : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        return result ? ResponseEntity.ok().build() : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
     private String generateHashCodeWithMacSha256(String secretKey, Object content) {
